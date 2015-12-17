@@ -10,11 +10,17 @@ environment:
 
 instalation:
 - install php, mysql, node.js and npm
+
 - `npm install -g grunt-cli`
+
 - `npm install`
+
 - `bower install`
+
 - `grunt default` compile production version
+
 - `grunt api` run api backend
+
 - `grunt serv` run http server
 
 Supported commands:
