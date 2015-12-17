@@ -1,0 +1,38 @@
+<div class="modal-header">
+  <h3 class="modal-title" ng-bind="item.name"></h3>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="/assets/avatar-male.png" width="128" alt="" ng-if="item.sex == 1">
+      <img src="/assets/avatar-female.png" width="128" alt="" ng-if="item.sex == 2">
+    </div>
+    <div class="col-md-9">
+      <div class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Sex:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="Sex" readonly ng-model="item.sex">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Phone:</label>
+          <div class="col-sm-9">
+            <input type="tel" class="form-control" placeholder="Phone" readonly ng-model="item.phone">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <tags-input ng-model="relations" placeholder="Add a learner" add-from-autocomplete-only="true" key-property="id" display-property="name">
+        <auto-complete source="$root.loadTagsByName('/api/learners/', $query)"></auto-complete>
+      </tags-input>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" type="button" ng-click="save()">Save</button>
+  <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+</div>

@@ -1,0 +1,36 @@
+<h5>Список учителей, с которыми занимаются только ученики, родившиеся в этом месяце. (немного изменил задание чтобы оживить данные).</h5>
+<hr>
+<table class="table" ng-if="teachers.length">
+  <colgroup>
+    <col width="1%">
+    <col width="1%">
+    <col width="48%">
+    <col width="49%">
+    <col width="1%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="text-center">#</th>
+      <th>&nbsp;</th>
+      <th>Name</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="o in teachers">
+      <td class="text-center">
+        <span ng-bind="o.id"></span>
+      </td>
+      <td>
+        <img src="/assets/avatar-male.png" width="32" alt="" ng-if="o.sex == 1">
+        <img src="/assets/avatar-female.png" width="32" height="32" alt="" ng-if="o.sex == 2">
+      </td>
+      <td>
+        <span ng-bind="o.name"></span>
+      </td>
+      <td>
+        <span ng-bind="o.phone"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
