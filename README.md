@@ -1,6 +1,6 @@
 # s-eng
 
-environment:
+Environment:
 - node.js ~0.10
 - php ~5.4
 - mysql ~5.6
@@ -8,7 +8,7 @@ environment:
 - grunt-cli ~0.1
 - bower ~1.6 
 
-instalation:
+Instalation:
 - install php, mysql, node.js and npm
 
 - `npm install -g grunt-cli`
